@@ -95,8 +95,20 @@ comment at the place it would go, explaining what has to be true first.
 Deliberate, at the client's request — listed so a reviewer checking against the
 spec does not read them as mistakes.
 
+- **No "certified partner" claim anywhere.** Spec 1.5 lists "Certified partner
+  across six cloud platforms" and "CypherMax is a certified partner of …" as the
+  approved, legally-sensitive phrasings. Every one of them now reads "collaborates
+  with" / "we collaborate with" instead. This is a *weaker* claim than the spec
+  authorised, so it lowers rather than raises risk — but it also drops a real
+  credential, and it means the site no longer matches spec 1.5 verbatim.
+
+  Kept deliberately: the **Partner-powered** delivery-model tag and phrases like
+  "the partner's SLA" or "our cloud partners' products". Those describe whose
+  product a service is built on — the distinction spec 1.7 calls load-bearing —
+  not a certification CypherMax holds. Say the word if you want those reworded too.
 - **Header nav is Solutions · About Us · Contact Us**, centred, all three as plain
-  links. Spec 3.1 puts the phone number in the bar and makes Contact a "Talk to
+  links, and the bar is **not sticky**. Spec 3.1 asks for a sticky header that
+  shrinks after 80px, with the phone number in the bar and Contact as a "Talk to
   Us" button. The number is gone from the header and from the expanded mobile
   menu; it is still in the footer and on the Contact page, and every instance is a
   tappable `tel:` link. Note there is now no visually distinct CTA in the header —
@@ -183,6 +195,20 @@ Blocking items from the spec's TBD register, in rough order of lead time:
   the loop seamless — a flat `-50%` would drift by half a gap each cycle. The
   second copy is `aria-hidden`, the edges are masked so cells fade rather than
   being chopped, and the animation pauses on hover.
+- **Section headings sit in their own pool of light:** a blurred violet bloom
+  behind the text plus eight glowing dots around it, twinkling on a 6.5s cycle.
+  The dots are one radial gradient each (not a tiled field), so their positions
+  are fixed relative to the heading. `.section-head > *` is lifted to `z-index: 1`
+  because an absolutely-positioned pseudo-element otherwise paints above
+  non-positioned text.
+- **Nothing between sections.** `.section--panel` is deliberately bare — no
+  border, no tint, no glow — so the page reads as one continuous surface. Rhythm
+  comes from section spacing and the lit headings instead. The class is still on
+  the markup as the marker for "this section would take a distinct treatment";
+  add styles back to that one selector in `style.css` if one is ever wanted.
+- **The header is not sticky** — it scrolls away with the page, and there is no
+  scroll listener. `scroll-padding-top` is therefore just breathing room above an
+  anchor rather than clearance for a fixed bar.
 
   Note the reveal-on-scroll animation uses the independent `translate` property
   rather than `transform`. That is deliberate: `[data-reveal].is-visible` and

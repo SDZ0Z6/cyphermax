@@ -78,13 +78,13 @@ window.CYPHERMAX_PARAMS = {
       { key: 'teamYearsExperience', suffix: '+ years', label: 'Cloud infrastructure experience in our team' },
       /* Six is a fact, not a parameter — it is the number of partner platforms
        * in the `partners` list above. If a seventh is added, both change. */
-      { value: '6', label: 'Certified cloud platform partnerships' },
+      { value: '6', label: 'Cloud platforms we collaborate with' },
       { key: 'uptimeSla', label: 'Uptime commitment on managed environments' },
       { key: 'customerCount', label: 'Businesses supported across Asia-Pacific' }
     ]
   },
 
-  /* The six cloud platforms CypherMax holds formal partner status with.
+  /* The six cloud platforms CypherMax collaborates with.
    * Names are legally sensitive (spec 1.5) — use verbatim, never abbreviate.
    * `mark` refers to a key in marks.js; entries without one render as a text
    * wordmark, which is the trademark-safe fallback. */
@@ -105,32 +105,32 @@ window.CYPHERMAX_PARAMS = {
   aiModels: [
     {
       name: 'Qwen', developer: 'Alibaba Cloud',
-      via: 'Alibaba Cloud — certified partner',
+      via: 'Alibaba Cloud',
       modality: 'Text and multimodal', mark: 'qwen', enabled: true,
       note: 'Strong Chinese-language performance; available in the region'
     },
     {
       name: 'Claude', developer: 'Anthropic',
-      via: 'Amazon Web Services and Google Cloud — both certified partners',
+      via: 'Amazon Web Services and Google Cloud',
       modality: 'Text and multimodal', mark: 'claude', enabled: true,
       note: 'Two independent routes, which helps with availability and commercial flexibility'
     },
     {
       name: 'Gemini', developer: 'Google',
-      via: 'Google Cloud — certified partner',
+      via: 'Google Cloud',
       modality: 'Text and multimodal', mark: 'gemini', enabled: true,
       note: 'Tight integration with the rest of Google Cloud'
     },
     {
       name: 'Seedance', developer: 'ByteDance',
-      via: 'BytePlus — certified partner',
+      via: 'BytePlus',
       modality: 'Video generation', mark: null, enabled: true,
       note: 'A different modality from the others — for video, not chat or text'
     },
     {
       /* Ships disabled, and must stay that way until B5 is decided.
        * GPT models are OpenAI's, and OpenAI is not one of the six platforms
-       * CypherMax holds partner status with. The usual enterprise route is
+       * CypherMax collaborates with. The usual enterprise route is
        * Azure OpenAI Service, and Azure is out of scope for this release
        * (spec 1.6). Three options, one of which has to be picked:
        *   1. a direct commercial relationship with OpenAI — workable, but then
@@ -140,7 +140,7 @@ window.CYPHERMAX_PARAMS = {
        *   2. bring Azure into scope — reverses the 1.6 decision and means
        *      adding Microsoft to the platform list, capability matrix and logo
        *      wall. Much larger than one card on one page;
-       *   3. drop GPT and ship four models across four certified partners,
+       *   3. drop GPT and ship four models across four platforms we collaborate with,
        *      which is a coherent story on its own.
        * Showing a model on this wall is a representation that you can supply
        * it. Do not enable this to look more complete. */

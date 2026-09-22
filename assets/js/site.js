@@ -242,7 +242,7 @@
 
           '<div class="site-footer__partners">' +
             '<div class="site-footer__partner-row">' + partnerRow + '</div>' +
-            '<p class="site-footer__partner-caption">Certified partner across Alibaba Cloud, ' +
+            '<p class="site-footer__partner-caption">We collaborate with Alibaba Cloud, ' +
               'Tencent Cloud, Amazon Web Services, Google Cloud, BytePlus and Huawei Cloud.</p>' +
           '</div>' +
 
@@ -306,7 +306,7 @@
       '<section class="section section--tight">' +
         '<div class="container">' +
           '<p class="eyebrow eyebrow--center" style="display:flex;justify-content:center">' +
-            'Certified partner across six cloud platforms</p>' +
+            'We collaborate with six cloud platforms</p>' +
         '</div>' +
         '<div class="logo-marquee" data-reveal>' +
           '<div class="logo-marquee__track">' +
@@ -315,7 +315,7 @@
           '</div>' +
         '</div>' +
         '<div class="container">' +
-          '<p class="logo-wall__caption">CypherMax is a certified partner of Alibaba Cloud, ' +
+          '<p class="logo-wall__caption">CypherMax collaborates with Alibaba Cloud, ' +
             'Tencent Cloud, Amazon Web Services, Google Cloud, BytePlus and Huawei Cloud.</p>' +
         '</div>' +
       '</section>';
@@ -424,12 +424,9 @@
     var header = document.querySelector('.site-header');
     if (!header) return;
 
-    // Reduced height with a backdrop after 80px (spec 3.1).
-    var onScroll = function () {
-      header.classList.toggle('is-stuck', window.scrollY > 80);
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
+    // The bar is not sticky — it scrolls away with the page — so there is no
+    // scroll listener here. Spec 3.1 asks for a sticky header that shrinks
+    // after 80px; removed at the client's request.
 
     // Keyboard support for the Solutions dropdown, which otherwise only
     // opens on hover.

@@ -76,8 +76,9 @@
 
 html {
   scroll-behavior: smooth;
-  /* Offset for the sticky header when jumping to an anchor. */
-  scroll-padding-top: 96px;
+  /* A little breathing room above an anchor target. The header is not sticky,
+     so this no longer has to clear it — it is just margin. */
+  scroll-padding-top: 24px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -250,15 +251,71 @@ p { margin: 0; }
 .section { padding-block: var(--section-y); }
 .section--tight { padding-block: clamp(52px, 6vw, 80px); }
 
-/* A panel one step up from the page background, used to break up long pages. */
-.section--panel {
-  background: linear-gradient(180deg, rgba(255, 255, 255, .018) 0%, rgba(255, 255, 255, 0) 100%);
-  border-block: 1px solid var(--border);
+/* A panel one step up from the page background, used to break up long pages.
+   Sections meet through a soft glow rather than a ruled line: a violet bloom
+   at each edge, plus a hairline that fades out before it reaches either side,
+   so there is no hard horizontal cut anywhere on the page. */
+/* Deliberately bare. Sections run into each other with nothing between them —
+   no border, no tint, no glow — so the page reads as one continuous surface and
+   the only rhythm comes from spacing and the lit section headings.
+   The class is kept on the markup as the marker for "this section would take a
+   distinct treatment"; add it back here if one is ever wanted. */
+.section--panel { position: relative; }
+
+/* Section headings sit in their own pool of light: a soft violet bloom behind
+   the text, and a scatter of small glowing dots around it, echoing the hero's
+   starfield so the two read as one system. Both are decorative pseudo-elements;
+   the heading's own children are lifted above them. */
+.section-head {
+  position: relative;
+  margin-bottom: 52px;
+}
+.section-head > * { position: relative; z-index: 1; }
+
+.section-head::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: min(560px, 96%);
+  height: 280px;
+  transform: translateY(-50%);
+  background: radial-gradient(ellipse 50% 50% at 50% 50%,
+    rgba(139, 92, 255, .20) 0%,
+    rgba(113, 61, 255, .08) 44%,
+    transparent 72%);
+  filter: blur(26px);
+  pointer-events: none;
 }
 
-.section-head { margin-bottom: 52px; }
+/* One dot per gradient — the background box is the heading block, so each
+   percentage position places a single star rather than tiling a field. */
+.section-head::after {
+  content: '';
+  position: absolute;
+  inset: -34px -4% -26px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(2.8px 2.8px at 4% 18%,  #fff 0%, rgba(199, 178, 255, .45) 28%, transparent 100%),
+    radial-gradient(2.2px 2.2px at 17% 82%, #fff 0%, rgba(185, 163, 255, .4) 28%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 33% 8%,  #fff 0%, rgba(214, 200, 255, .42) 28%, transparent 100%),
+    radial-gradient(1.9px 1.9px at 47% 92%, #fff 0%, rgba(185, 163, 255, .36) 28%, transparent 100%),
+    radial-gradient(2.6px 2.6px at 62% 14%, #fff 0%, rgba(199, 178, 255, .42) 28%, transparent 100%),
+    radial-gradient(2.1px 2.1px at 78% 74%, #fff 0%, rgba(214, 200, 255, .38) 28%, transparent 100%),
+    radial-gradient(2.4px 2.4px at 90% 26%, #fff 0%, rgba(185, 163, 255, .4) 28%, transparent 100%),
+    radial-gradient(1.8px 1.8px at 96% 66%, #fff 0%, rgba(199, 178, 255, .34) 28%, transparent 100%);
+  animation: section-sparkle 6.5s ease-in-out infinite;
+}
+
+@keyframes section-sparkle {
+  0%, 100% { opacity: .45; }
+  50%      { opacity: 1; }
+}
+
 .section-head--center { text-align: center; }
 .section-head--center .section-intro { margin-inline: auto; }
+.section-head--center::before { left: 50%; transform: translate(-50%, -50%); }
 
 .grid { display: grid; gap: 20px; }
 .grid--2 { grid-template-columns: repeat(2, 1fr); }
@@ -539,20 +596,10 @@ p { margin: 0; }
 /* --------------------------------------------------------------------------
    7. Header
    -------------------------------------------------------------------------- */
+/* Not sticky: the bar scrolls away with the page. */
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
-  border-bottom: 1px solid transparent;
-  transition: background-color .3s var(--ease), border-color .3s var(--ease),
-              backdrop-filter .3s var(--ease);
-}
-/* Reduced height and a backdrop once the page scrolls (spec 3.1). */
-.site-header.is-stuck {
-  background: rgba(10, 1, 24, .78);
-  backdrop-filter: saturate(160%) blur(14px);
-  -webkit-backdrop-filter: saturate(160%) blur(14px);
-  border-bottom-color: var(--border);
 }
 
 .site-header__inner {
@@ -560,9 +607,7 @@ p { margin: 0; }
   align-items: center;
   gap: 28px;
   height: 78px;
-  transition: height .3s var(--ease);
 }
-.site-header.is-stuck .site-header__inner { height: 64px; }
 
 /* The logo and the right-hand slot each take an equal flexible share, which
    keeps the nav optically centred in the bar whatever the logo's width. */
