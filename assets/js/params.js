@@ -45,7 +45,7 @@ window.CYPHERMAX_PARAMS = {
      * items in the TBD register resolved (B1 DPO, B2 review, B3 liability).
      * Set to false only once that review is done — at which point the pages are
      * no longer drafts. */
-    legalDraftNotice: true
+    legalDraftNotice: false
   },
 
   company: {
