@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI as a Service (AIaaS) for APAC Businesses | CypherMax</title>
+<meta name="description" content="Run Qwen, Claude, Gemini, Seedance and more through our cloud partners — integrated into your application with access control, data handling and cost guardrails.">
+<link rel="canonical" href="https://cyphermaxsg.com/solutions/aiaas">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CypherMax">
+<meta property="og:locale" content="en_SG">
+<meta property="og:url" content="https://cyphermaxsg.com/solutions/aiaas">
+<meta property="og:title" content="Ship AI features without building an ML platform first. | CypherMax">
+<meta property="og:description" content="Run Qwen, Claude, Gemini, Seedance and more through our cloud partners — integrated into your application with access control, data handling and cost guardrails.">
+<meta property="og:image" content="https://cyphermaxsg.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ship AI features without building an ML platform first. | CypherMax">
+<meta name="twitter:description" content="Run Qwen, Claude, Gemini, Seedance and more through our cloud partners — integrated into your application with access control, data handling and cost guardrails.">
+<meta name="twitter:image" content="https://cyphermaxsg.com/assets/og-image.png">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can our data stay in the region?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes, and it depends on the platform, the specific model, and the region it is served from. Regional availability for AI services changes frequently, so this is a question we answer against current documentation for your chosen platform rather than from memory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will our data be used to train the model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is governed by the terms of whichever platform serves the model, and the answer can differ between two platforms serving the same model. We will read those terms with you and document the answer before you build on it, because it is usually the question your customers will ask first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you run more than one model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it is often the right architecture &mdash; a cheaper model for routine work, a stronger one for the cases that need it. Because the models on our wall run across different partner platforms, this does mean more than one account and more than one set of terms, which we will set up and manage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We only need this occasionally. Is that a problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Managed endpoints suit intermittent use better than reserved GPU capacity does, and part of the selection work is matching the commercial model to how often you will actually use it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help us control the cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it is included rather than sold separately. Quotas, budgets and anomaly alerting are set up during provisioning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the model endpoint goes down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We build a fallback path during integration &mdash; degrade the feature gracefully, queue the request, or route to an alternate endpoint, depending on what your application can tolerate. Deciding this before launch is much easier than deciding it at 3am."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div data-component="header" data-active="solutions"></div>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__sky" aria-hidden="true">
+      <div class="hero__stars"></div>
+      <div class="hero__horizon">
+        <div class="hero__arcs"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="hero__dome"></div>
+        <div class="hero__aurora"></div>
+      </div>
+    </div>
+    <div class="container hero__inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../../solutions/index.html">Solutions</a><span aria-hidden="true">/</span><span>AIaaS</span>
+      </nav>
+      <p class="eyebrow">Partner-powered &middot; Operated by CypherMax</p>
+      <h1 class="grad-text">Ship AI features without building an ML platform first.</h1>
+      <p class="lede mt-24">Managed access to leading models and GPU capacity through our cloud partners, wired into your application with access control, data handling and cost limits already in place.</p>
+      <div class="btn-row mt-32"><a class="btn btn--primary btn--lg" href="../../contact/index.html">Talk to us about AI</a><a class="btn btn--ghost btn--lg" href="../../solutions/index.html">See all solutions</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Fit</p>
+          <h2 class="grad-text">This is for you if</h2>
+        </div>
+        <div data-reveal>
+          <ul class="check-list">
+        <li>You have an AI feature on the roadmap and no infrastructure plan behind it.</li>
+        <li>Your prototype works on a developer's personal API key and now needs to go to production.</li>
+        <li>You need GPU capacity for a specific workload and do not want to own hardware for it.</li>
+        <li>Your customers or regulator will ask where their data goes when it reaches a model, and you need a defensible answer.</li>
+        <li>Someone ran an experiment last month and the bill was a surprise.</li>
+      </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Scope</p>
+        <h2 class="grad-text">What is included</h2>
+      </div>
+      <div class="grid grid--4">
+        <article class="card" data-reveal>
+          <h3 class="card__title">Requirement and fit review</h3>
+          <p class="card__body">What you are actually trying to do, and whether it needs a model at all. A retrieval problem dressed up as an AI problem is common, and cheaper to solve honestly.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Model and platform selection</h3>
+          <p class="card__body">A recommendation across the models available through our partners, weighed on capability, regional availability, data-residency terms, and cost per unit of real usage rather than per benchmark.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Provisioning</h3>
+          <p class="card__body">Model endpoint or GPU capacity provisioned under a proper account structure, with quotas and limits set from day one instead of after the first incident.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Integration</h3>
+          <p class="card__body">Connecting the endpoint to your application: authentication, key management, retry and timeout handling, and a fallback path for when the model endpoint is unavailable.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Access control and secrets handling</h3>
+          <p class="card__body">Keys held in a managed secret store, scoped per environment, rotatable, and never in a repository. This sounds basic and it is the most common failure we see.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Data handling review</h3>
+          <p class="card__body">What data leaves your environment, where it is processed, which region it is processed in, and what the platform's terms say about retention and training use. Written down, so you can hand it to a customer who asks.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Cost guardrails</h3>
+          <p class="card__body">Budgets, quotas and anomaly alerting on AI spend specifically. Token and GPU costs scale with usage in a way that surprises teams used to fixed infrastructure &mdash; see <a class="link-underline" href="../../solutions/finops/index.html">FinOps</a>.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Monitoring</h3>
+          <p class="card__body">Latency, error rate, throughput and spend, reported alongside the rest of your infrastructure rather than in a separate tool nobody opens.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Models</p>
+        <h2 class="grad-text">Models we can put in front of you</h2>
+        <p class="section-intro">
+          You should not have to pick a model before you understand the trade-offs. Here is what we can
+          provision, and which platform it runs on.
+        </p>
+      </div>
+
+      <!--
+        This wall is built from params.js `aiModels`, not from markup — model
+        availability, naming and regional coverage change faster than anything
+        else on this site. Only entries with enabled:true render.
+
+        The GPT card ships disabled and must stay that way until register B5 is
+        decided. See the comment beside the entry in params.js for the three
+        options and why showing it early is a sales problem, not a design one.
+
+        Logo permission for the five model brands is register B6 — a separate
+        question from the cloud partner agreements, because these are different
+        companies. Brands with no usable mark render as a wordmark.
+      -->
+      <div data-component="model-wall"></div>
+
+      <p class="section-intro mt-40">
+        Which model suits you is a question about your use case, your budget and where your data is
+        allowed to go &mdash; not about which name you have heard most often. We will work through it
+        with you before anything is provisioned.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <p class="eyebrow eyebrow--center">Platforms</p>
+        <h2 class="grad-text">Platforms and GPU capacity</h2>
+        <p class="section-intro">
+          We provision managed AI services and GPU capacity from our certified partner platforms: Amazon
+          Web Services, Google Cloud, Alibaba Cloud, Tencent Cloud, Huawei Cloud and BytePlus.
+        </p>
+      </div>
+      <!--
+        TBD (register 17):
+          (a) list the specific managed AI, model-serving and GPU products
+              CypherMax is authorised to resell and operate on each of the six
+              platforms, including the GPU instance families available. Confirm
+              regional availability for Southeast Asia — several AI services
+              reach Singapore later than they reach the US and Europe, and a
+              model listed on the wall must actually be reachable from a region
+              your customers can use;
+          (b) for each model on the wall, confirm the platform's current
+              data-retention and training-use terms before summarising them
+              anywhere on this page. These terms differ by platform even for the
+              same model.
+      -->
+    </div>
+  </section>
+
+  <div data-component="partner-wall"></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Boundaries</p>
+          <h2 class="grad-text">What this is not</h2>
+          <p class="section-intro">
+            The AI market rewards vagueness. We would rather be specific.
+          </p>
+        </div>
+        <!--
+          TBD (register 17): confirm whether any applied ML or data engineering
+          capability exists in-house; if not, consider naming referral partners.
+        -->
+        <div data-reveal>
+          <ul class="cross-list">
+            <li><strong>We do not build these models.</strong> Qwen, Claude, Gemini, Seedance and every other model on the wall belong to the companies that made them. What we own is the infrastructure, integration, controls and cost around them.</li>
+            <li><strong>We are not a data science consultancy.</strong> We do not build your model strategy, label your data, or write your evaluation methodology.</li>
+            <li><strong>We do not promise a specific model's capability.</strong> Model behaviour, pricing and availability are set by the platform that operates it, and they change without reference to us.</li>
+            <li><strong>This is not a way to avoid a data-protection decision.</strong> We will document what happens to your data, but the decision about whether that is acceptable is yours to make.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section-head section-head--center">
+        <p class="eyebrow eyebrow--center">FAQ</p>
+        <h2 class="grad-text">AIaaS FAQ</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ai-1">
+            Can our data stay in the region?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ai-1" data-open="false"><div>
+            <p>Often yes, and it depends on the platform, the specific model, and the region it is served from. Regional availability for AI services changes frequently, so this is a question we answer against current documentation for your chosen platform rather than from memory.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ai-2">
+            Will our data be used to train the model?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ai-2" data-open="false"><div>
+            <p>That is governed by the terms of whichever platform serves the model, and the answer can differ between two platforms serving the same model. We will read those terms with you and document the answer before you build on it, because it is usually the question your customers will ask first.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ai-3">
+            Can you run more than one model?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ai-3" data-open="false"><div>
+            <p>Yes, and it is often the right architecture &mdash; a cheaper model for routine work, a stronger one for the cases that need it. Because the models on our wall run across different partner platforms, this does mean more than one account and more than one set of terms, which we will set up and manage.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ai-4">
+            We only need this occasionally. Is that a problem?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ai-4" data-open="false"><div>
+            <p>No. Managed endpoints suit intermittent use better than reserved GPU capacity does, and part of the selection work is matching the commercial model to how often you will actually use it.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ai-5">
+            Can you help us control the cost?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ai-5" data-open="false"><div>
+            <p>Yes, and it is included rather than sold separately. Quotas, budgets and anomaly alerting are set up during provisioning.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ai-6">
+            What happens if the model endpoint goes down?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ai-6" data-open="false"><div>
+            <p>We build a fallback path during integration &mdash; degrade the feature gracefully, queue the request, or route to an alternate endpoint, depending on what your application can tolerate. Deciding this before launch is much easier than deciding it at 3am.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Related</p>
+        <h2 class="grad-text">Where this usually goes next</h2>
+      </div>
+      <div class="grid grid--2">
+        <a class="card card--hover" href="../../solutions/finops/index.html" data-reveal>
+          <h3 class="card__title">FinOps</h3>
+          <p class="card__body">Keep AI spend predictable.</p>
+          <span class="link-arrow mt-24" style="display:inline-flex">Explore FinOps <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="card card--hover" href="../../solutions/cloudops/index.html" data-reveal>
+          <h3 class="card__title">CloudOps</h3>
+          <p class="card__body">Operate it alongside everything else.</p>
+          <span class="link-arrow mt-24" style="display:inline-flex">Explore CloudOps <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div data-component="cta-band"></div>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script src="../../assets/js/params.js"></script>
+<script src="../../assets/js/marks.js"></script>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

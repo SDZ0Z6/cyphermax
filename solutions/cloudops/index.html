@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Managed Cloud Operations (CloudOps) | CypherMax Singapore</title>
+<meta name="description" content="Monitoring, patching, backups, incident response and change management for your cloud environment, run as a monthly service from Singapore.">
+<link rel="canonical" href="https://cyphermaxsg.com/solutions/cloudops">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CypherMax">
+<meta property="og:locale" content="en_SG">
+<meta property="og:url" content="https://cyphermaxsg.com/solutions/cloudops">
+<meta property="og:title" content="Your infrastructure, looked after every day | CypherMax">
+<meta property="og:description" content="Monitoring, patching, backups, incident response and change management for your cloud environment, run as a monthly service from Singapore.">
+<meta property="og:image" content="https://cyphermaxsg.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your infrastructure, looked after every day | CypherMax">
+<meta name="twitter:description" content="Monitoring, patching, backups, incident response and change management for your cloud environment, run as a monthly service from Singapore.">
+<meta name="twitter:image" content="https://cyphermaxsg.com/assets/og-image.png">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you replace our engineer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. More often we become their second pair of hands and their escalation path, so they can work on the things only they can do &mdash; and take annual leave."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which clouds can you operate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon Web Services, Google Cloud, Alibaba Cloud, Tencent Cloud, Huawei Cloud and BytePlus. If you run across more than one, that is normal and we will operate them together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What access do you need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The least access that lets us do the agreed job, provisioned through named roles rather than shared credentials, and revocable by you at any time. We document exactly what we hold and why."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we leave?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The notice period is set out in the service agreement. You keep your runbooks and documentation. An exit that leaves you unable to operate your own environment is not a service, it is a hostage situation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you monitor our application, or just the infrastructure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Infrastructure and platform by default. Application-level monitoring can be added if you have the instrumentation, or built as a separate project if you do not."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div data-component="header" data-active="solutions"></div>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__sky" aria-hidden="true">
+      <div class="hero__stars"></div>
+      <div class="hero__horizon">
+        <div class="hero__arcs"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="hero__dome"></div>
+        <div class="hero__aurora"></div>
+      </div>
+    </div>
+    <div class="container hero__inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../../solutions/index.html">Solutions</a><span aria-hidden="true">/</span><span>CloudOps</span>
+      </nav>
+      <p class="eyebrow">CypherMax-delivered</p>
+      <h1 class="grad-text">Your infrastructure, looked after every day &mdash; not just when it breaks.</h1>
+      <p class="lede mt-24">Monitoring, patching, backup verification, incident response and change management, run as a monthly service against a scope you have read and agreed to<span data-param-if="metrics.uptimeSla">, and backed by a <span data-param="metrics.uptimeSla"></span> uptime commitment</span>.</p>
+      <div class="btn-row mt-32"><a class="btn btn--primary btn--lg" href="../../contact/index.html">Book a free consultation</a><a class="btn btn--ghost btn--lg" href="../../solutions/index.html">See all solutions</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Fit</p>
+          <h2 class="grad-text">This is for you if</h2>
+        </div>
+        <div data-reveal>
+          <ul class="check-list">
+        <li>Your alerts go to a channel nobody reads after 6pm.</li>
+        <li>Backups are configured, but no one has restored from them.</li>
+        <li>Patching happens when something forces it.</li>
+        <li>Your one infrastructure-capable engineer cannot take a proper holiday.</li>
+        <li>You need to answer a customer or investor security questionnaire and cannot evidence basic operational hygiene.</li>
+      </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Scope</p>
+        <h2 class="grad-text">What is included</h2>
+      </div>
+      <!--
+        TBD (register 17, "Service scope"): confirm coverage hours, response
+        targets by severity and the on-call model for incident response. Once
+        confirmed, add them as parameters in params.js rather than typing them
+        into this page.
+      -->
+      <div class="grid grid--3">
+        <article class="card" data-reveal>
+          <h3 class="card__title">Monitoring and alerting</h3>
+          <p class="card__body">Health, capacity and availability monitoring on the agreed scope, with alerts routed to people who are actually on duty. We tune the thresholds so alerts mean something &mdash; an alarm nobody trusts is worse than no alarm.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Patching and maintenance</h3>
+          <p class="card__body">Operating system and agreed platform-level patching on a defined cycle, applied to a staging environment first where one exists.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Backup and restore verification</h3>
+          <p class="card__body">We confirm backups are running, and we periodically restore from them. A backup that has never been restored is an assumption, not a backup.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Incident response</h3>
+          <p class="card__body">A defined escalation path and a named responder for incidents inside the agreed scope, with a written post-incident summary for anything significant.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Change management</h3>
+          <p class="card__body">Changes go through a documented request, review and rollback process. Small enough to not slow you down; formal enough that you know who changed what and when.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Access and identity hygiene</h3>
+          <p class="card__body">Periodic review of accounts, roles and keys &mdash; including the dormant admin account belonging to someone who left.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">Monthly reporting</h3>
+          <p class="card__body">A monthly report covering availability, incidents, changes, patch status and spend, plus a quarterly review of what should change.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel" data-param-if="metrics.uptimeSla">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The commitment</p>
+        <h2 class="grad-text">What <span data-param="metrics.uptimeSla"></span> actually means</h2>
+        <p class="section-intro">
+          We commit to <span data-param="metrics.uptimeSla"></span> availability on environments under an
+          agreed CloudOps scope. Because that number is worth very little without its definition, here is
+          what sits behind it.
+        </p>
+      </div>
+
+      <!--
+        SIGN-OFF GATE (register B4). Two conditions before this figure goes live:
+          1. the same number and definition appear in the standard service agreement, and
+          2. it is supported by the underlying partner SLAs for every component in
+             a standard managed scope.
+        A commitment that exceeds what the platform beneath it promises is one you
+        cannot keep. If either condition is unmet, set metrics.uptimeSla to "" —
+        the hero clause and this whole section then disappear cleanly.
+
+        Still to be filled in below: the measurement window (calendar month,
+        rolling 30 days or quarter), the exclusion list, and the remedy.
+      -->
+      <div class="grid grid--2">
+        <article class="card" data-reveal>
+          <h3 class="card__title">What is measured</h3>
+          <p class="card__body">
+            The availability of the infrastructure and platform components inside the agreed scope, not
+            your application code.
+          </p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 class="card__title">What it is not</h3>
+          <p class="card__body">
+            A measured historical figure, or a commitment about a cloud partner's own platform
+            availability. Partner platforms carry their own service commitments, which we will identify
+            for your configuration.
+          </p>
+        </article>
+      </div>
+
+      <div class="panel mt-40" data-reveal>
+        <p class="card__body">
+          The measurement window, the full exclusion list and the remedy are set out in the service
+          agreement, and we will walk you through all three before you sign. An uptime figure without
+          those three things attached is a slogan, not a commitment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Boundaries</p>
+          <h2 class="grad-text">What is not included</h2>
+          <p class="section-intro">
+            Being clear about this up front is cheaper for both of us than discovering it during an
+            incident.
+          </p>
+        </div>
+        <!--
+          TBD (register 17): confirm whether CypherMax offers security services
+          beyond operational hygiene. Penetration testing and managed SOC
+          monitoring are licensable activities in Singapore (see spec 1.9 note 3).
+          If these are not offered, say so plainly and consider naming referral
+          partners.
+        -->
+        <div data-reveal>
+          <ul class="cross-list">
+            <li><strong>Application code.</strong> We operate the platform your application runs on. We do not debug your application logic, though we will help you find out which side a problem is on.</li>
+            <li><strong>Anything outside the agreed scope.</strong> The scope is written down and reviewed quarterly. Adding an environment is a conversation, not an assumption.</li>
+            <li><strong>A security programme.</strong> Operational hygiene is included; a formal security programme, penetration testing and certification audit work are separate.</li>
+            <li><strong>Unmanaged emergency work on environments we have not assessed.</strong> We cannot responsibly take on-call responsibility for an environment we have never seen.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Onboarding</p>
+        <h2 class="grad-text">How onboarding works</h2>
+      </div>
+      <div class="table-wrap" data-reveal>
+        <table class="table">
+          <thead><tr><th scope="col">Step</th><th scope="col">What happens</th></tr></thead>
+          <tbody>
+            <tr><td>1. Assessment</td><td>We review the environment and produce a findings document: what is healthy, what is at risk, and what must change before we can support it.</td></tr>
+            <tr><td>2. Remediation</td><td>Agreed fixes to bring the environment to a supportable baseline &mdash; monitoring coverage, backup configuration, access control, documentation. Quoted separately, as a fixed scope.</td></tr>
+            <tr><td>3. Scope agreement</td><td>A written service scope: environments covered, responsibilities on each side, escalation path, reporting cadence.</td></tr>
+            <tr><td>4. Transition</td><td>Runbooks written, alerting routed, access provisioned, a handover session held with your team.</td></tr>
+            <tr><td>5. Steady state</td><td>Monthly operation and reporting, with a quarterly review.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section-head section-head--center">
+        <p class="eyebrow eyebrow--center">FAQ</p>
+        <h2 class="grad-text">CloudOps FAQ</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ops-1">
+            Do you replace our engineer?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ops-1" data-open="false"><div>
+            <p>Usually not. More often we become their second pair of hands and their escalation path, so they can work on the things only they can do &mdash; and take annual leave.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ops-2">
+            Which clouds can you operate?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ops-2" data-open="false"><div>
+            <p>Amazon Web Services, Google Cloud, Alibaba Cloud, Tencent Cloud, Huawei Cloud and BytePlus. If you run across more than one, that is normal and we will operate them together.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ops-3">
+            What access do you need?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ops-3" data-open="false"><div>
+            <p>The least access that lets us do the agreed job, provisioned through named roles rather than shared credentials, and revocable by you at any time. We document exactly what we hold and why.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ops-4">
+            Can we leave?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ops-4" data-open="false"><div>
+            <p><span data-param-if="commitments.exitNoticePeriod">Yes, with <span data-param="commitments.exitNoticePeriod"></span> notice.</span><span data-param-else="commitments.exitNoticePeriod">Yes. The notice period is set out in the service agreement.</span> You keep your runbooks and documentation. An exit that leaves you unable to operate your own environment is not a service, it is a hostage situation.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-ops-5">
+            Do you monitor our application, or just the infrastructure?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="faq-ops-5" data-open="false"><div>
+            <p>Infrastructure and platform by default. Application-level monitoring can be added if you have the instrumentation, or built as a separate project if you do not.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Related</p>
+        <h2 class="grad-text">Where this usually goes next</h2>
+      </div>
+      <div class="grid grid--2">
+        <a class="card card--hover" href="../../solutions/finops/index.html" data-reveal>
+          <h3 class="card__title">FinOps</h3>
+          <p class="card__body">Reduce what the environment costs to run.</p>
+          <span class="link-arrow mt-24" style="display:inline-flex">Explore FinOps <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="card card--hover" href="../../solutions/cloud-migration/index.html" data-reveal>
+          <h3 class="card__title">Cloud Migration</h3>
+          <p class="card__body">If the environment needs to move first.</p>
+          <span class="link-arrow mt-24" style="display:inline-flex">Explore Cloud Migration <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div data-component="cta-band"></div>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script src="../../assets/js/params.js"></script>
+<script src="../../assets/js/marks.js"></script>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

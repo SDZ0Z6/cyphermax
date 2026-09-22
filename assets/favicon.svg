@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72">
+  <!-- Simplified small-size variant: the shield plus the C only. The fine
+       internal arcs in the full mark turn to mush at favicon scale (spec 1.10
+       design note), so they are dropped here.
+       INTERIM ASSET — replace when the designer delivers the official SVG. -->
+  <rect width="64" height="72" fill="none"/>
+  <path d="M32 3.5 58.5 13v24.2c0 13.9-11.2 24.9-26.5 31.3C16.7 62.1 5.5 51.1 5.5 37.2V13L32 3.5Z"
+        fill="none" stroke="#2e9bff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M44 25.5a14 14 0 1 0 0 21" fill="none" stroke="#2e9bff" stroke-width="4" stroke-linecap="square"/>
+  <path d="M44 25.5h-7M44 46.5h-7" fill="none" stroke="#2e9bff" stroke-width="4" stroke-linecap="square"/>
+</svg>

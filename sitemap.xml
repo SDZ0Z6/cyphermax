@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Indexable pages only. /thank-you and /404 are noindex and are deliberately
+  absent. /careers and /insights are out of scope for this release (spec 2) —
+  the URLs are reserved but must not appear here until those pages exist.
+
+  Canonical host: https://cyphermaxsg.com (no www). Pick one, 301-redirect the
+  other, and never serve both (spec 18).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://cyphermaxsg.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions/cloud-migration</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions/cloudops</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions/finops</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions/cdn</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions/ddos-protection</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/solutions/aiaas</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/about</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/privacy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cyphermaxsg.com/terms</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>
